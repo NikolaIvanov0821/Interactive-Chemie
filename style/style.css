@@ -1,0 +1,18 @@
+header a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin: 10px;
+    text-align: center;
+}
+
+body {
+    justify-content: center;
+    margin: 0;
+}
+
+main {
+    padding: 8px;
+}

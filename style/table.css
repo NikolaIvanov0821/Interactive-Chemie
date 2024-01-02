@@ -1,0 +1,265 @@
+@media screen and (min-width: 1000px) {
+    #table {
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        /*grid-template-rows: repeat(7, 1fr);*/    
+        gap: 1px;
+        align-self: center;
+    }
+    
+    #lanthanoids {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-rows: 1fr;
+        gap: 1px;
+        width: 75%;
+    }
+    
+    #acthanoids {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-rows: 1fr;
+        gap: 1px;
+        width: 75%;
+    }
+    
+    #element {
+        height: 5rem;
+        width: 5rem;
+    }
+    .element {
+        height: 5rem;
+        width: 5rem;
+        border: 1px solid #ccc;
+        display: flex;
+        z-index: 100;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 0 15% black;
+    }
+    
+    .element:hover {
+        cursor: pointer;
+    }
+
+    .bg-name {
+        font-size: 12px;
+        text-align: center;
+        z-index: 0;
+    }
+    .atomic-number {
+        font-size: 12px;
+        text-align: left;
+        padding-left: 2px;
+        z-index: 0;
+    }
+    
+    .symbol {
+        font-size: 24px;
+        text-align: center;
+        z-index: 0;
+        cursor: pointer;
+    }
+    
+    .name {
+        font-size: 12px;
+        text-align: center;
+        z-index: 0;
+    }
+    
+    .atomic-mass {
+        font-size: 12px;
+        text-align: right;
+        padding-right: 2px;
+        z-index: 0;
+    }
+
+    #popup-box {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        z-index: 1000;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #e8f8ff;
+        color: black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .content {
+        overflow-y: scroll;
+        
+    }
+    
+    .content h1 {
+        color: #2ecc71;
+        font-size: 24px;
+    }
+    
+    .content-bold {
+        font-weight: bold;
+    }
+    
+    .box-close {
+        background-color: rgb(255, 0, 0);
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+}
+#nonmetal {
+    background-color: #ffff00;
+}
+#noble-gas {
+    background-color: #c8e519;
+}
+#halogen {
+    background-color: #ffcdd2;
+}
+#alkali-metal {
+    background-color: #bc5db1;
+}
+#alkaline-earth-metal {
+    background-color: #48c8fe;
+}
+#transition-metal {
+    background-color: #b5e7fb;
+}
+#lanthanoid {
+    background-color: #ffbe06;
+}
+#acthanoid {
+    background-color: #fe9600;
+}
+#post-transition-metal {
+    background-color: #b8a7db;
+}
+
+
+
+@media screen and (min-width: 600px) {
+    #table-wrapper {
+         align-items: center;
+    }
+    #table {
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);    
+        row-gap: 1px;
+        column-gap: 1px;
+        align-self: center;
+    }
+    
+    #lanthanoids {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-rows: 1fr;
+        gap: 1px;
+        width: 75%;
+    }
+    
+    #acthanoids {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-rows: 1fr;
+        gap: 1px;
+        width: 75%;
+    }
+    
+    #element {
+        height: 5rem;
+        width: 5rem;
+    }
+    .element {
+        height: 5rem;
+        width: 5rem;
+        border: 1px solid #ccc;
+        display: flex;
+        z-index: 100;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 0 15% black;
+    }
+    
+    .element:hover {
+        cursor: pointer;
+    }
+
+    .bg-name {
+        font-size: 12px;
+        text-align: center;
+        z-index: 0;
+    }
+    .atomic-number {
+        font-size: 12px;
+        text-align: left;
+        padding-left: 2px;
+        z-index: 0;
+    }
+    
+    .symbol {
+        font-size: 24px;
+        text-align: center;
+        z-index: 0;
+        cursor: pointer;
+    }
+    
+    .name {
+        font-size: 12px;
+        text-align: center;
+        z-index: 0;
+    }
+    
+    .atomic-mass {
+        font-size: 12px;
+        text-align: right;
+        padding-right: 2px;
+        z-index: 0;
+    }
+
+    #popup-box {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        z-index: 1000;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #e8f8ff;
+        color: black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .content {
+        overflow-y: scroll;
+        
+    }
+    
+    .content h1 {
+        color: #2ecc71;
+        font-size: 24px;
+    }
+    
+    .content-bold {
+        font-weight: bold;
+    }
+    
+    .box-close {
+        background-color: rgb(255, 0, 0);
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+}
