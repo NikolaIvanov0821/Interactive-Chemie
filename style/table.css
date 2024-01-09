@@ -1,4 +1,8 @@
 @media screen and (min-width: 1000px) {
+    #table-wrapper h2 {
+        display: flex;
+        justify-content: center;
+    }
     #table {
         width: 75%;
         display: grid;
