@@ -1,8 +1,4 @@
 @media screen and (min-width: 1000px) {
-    nav {
-        display: flex;
-        align-items: center;
-    }
     #table {
         width: 75%;
         display: grid;
