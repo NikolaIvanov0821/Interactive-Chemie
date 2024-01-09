@@ -3,6 +3,9 @@ nav {
     align-items: center;
 }
 
+header {
+    padding: 5px;
+}
 header a {
     display: inline-block;
     text-decoration: none;
@@ -14,9 +17,10 @@ header a {
 }
 
 body {
-    background-image: url("../images/background4.png");
-    justify-content: center;
     margin: 0;
+    background-image: url(../images/background2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 main {
