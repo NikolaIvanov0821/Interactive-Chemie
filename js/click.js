@@ -61,7 +61,7 @@ export function click(e) {
                                     </div>
                                 </div>`
     const myPopUp = document.getElementById("popup-box")
-    myPopUp.style.display = "block"
+    myPopUp.style.display = "flex"
     console.log(index.parentElement)
     myPopUp.style.backgroundColor = index.parentElement.style.backgroundColor
     document.querySelector(".box-close").onclick = closeBox
