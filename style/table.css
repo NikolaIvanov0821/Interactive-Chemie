@@ -1,4 +1,4 @@
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) {
     #table-wrapper h2 {
         display: flex;
         justify-content: center;
@@ -7,7 +7,6 @@
         width: 75%;
         display: grid;
         grid-template-columns: repeat(18, 5rem);
-        /*grid-template-rows: repeat(7, 1fr);*/
         gap: 1px;
         align-self: center;
     }
@@ -159,12 +158,16 @@
 
 
 
-@media screen and (min-width: 600px) {
-
+@media screen and (min-width: 1000px) {
+    #table-wrapper h2 {
+        display: flex;
+        justify-content: center;
+    }
+    
     #table {
         width: 75%;
         display: grid;
-        grid-template-columns: repeat(18, 1fr);
+        grid-template-columns: repeat(18, 5rem);
         row-gap: 5px;
         column-gap: 5px;
         margin-bottom: 5px;
@@ -174,7 +177,7 @@
 
     #lanthanoids {
         display: grid;
-        grid-template-columns: repeat(18, 1fr);
+        grid-template-columns: repeat(18, 5rem);
         grid-template-rows: 1fr;
         gap: 5px;
         width: 75%;
@@ -185,7 +188,7 @@
 
     #acthanoids {
         display: grid;
-        grid-template-columns: repeat(18, 1fr);
+        grid-template-columns: repeat(18, 5rem);
         grid-template-rows: 1fr;
         gap: 5px;
         width: 75%;
