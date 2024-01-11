@@ -1,4 +1,4 @@
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 1300px) {
     #table-wrapper h2 {
         display: flex;
         justify-content: center;
@@ -81,27 +81,30 @@
     }
 
     #popup-box {
-        display: none;
         position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1000;
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #e8f8ff;
-        color: black;
+        top: 200;
+        left: 400;
+        width: 70%;
+        height: 80%;
+        display: none;
+        align-items: center;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
     .content {
-        overflow-y: scroll;
-
+        margin: 10px;
+        margin-top: 10px;
+        padding: 20px;
+        max-height: 80vh;
+        overflow-y: auto;
+        background: #fff;
+        border-radius: 8px;
     }
 
     .content h1 {
-        color: #2ecc71;
+        color: #000000;
         font-size: 24px;
+        text-transform: capitalize;
     }
 
     .content-bold {
@@ -119,45 +122,6 @@
         cursor: pointer;
     }
 }
-
-#nonmetal {
-    background-color: #ffff00;
-}
-
-#noble-gas {
-    background-color: #c8e519;
-}
-
-#halogen {
-    background-color: #ffcdd2;
-}
-
-#alkali-metal {
-    background-color: #bc5db1;
-}
-
-#alkaline-earth-metal {
-    background-color: #48c8fe;
-}
-
-#transition-metal {
-    background-color: #b5e7fb;
-}
-
-#lanthanoid {
-    background-color: #ffbe06;
-}
-
-#acthanoid {
-    background-color: #fe9600;
-}
-
-#post-transition-metal {
-    background-color: #b8a7db;
-}
-
-
-
 @media screen and (min-width: 1000px) {
     #table-wrapper h2 {
         display: flex;
@@ -289,3 +253,41 @@
         cursor: pointer;
     }
 }
+#nonmetal {
+    background-color: #ffff00;
+}
+
+#noble-gas {
+    background-color: #c8e519;
+}
+
+#halogen {
+    background-color: #ffcdd2;
+}
+
+#alkali-metal {
+    background-color: #bc5db1;
+}
+
+#alkaline-earth-metal {
+    background-color: #48c8fe;
+}
+
+#transition-metal {
+    background-color: #b5e7fb;
+}
+
+#lanthanoid {
+    background-color: #ffbe06;
+}
+
+#acthanoid {
+    background-color: #fe9600;
+}
+
+#post-transition-metal {
+    background-color: #b8a7db;
+}
+
+
+
