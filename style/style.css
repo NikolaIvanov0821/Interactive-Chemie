@@ -11,7 +11,7 @@ header {
 header a {
     display: inline-block;
     text-decoration: none;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: bold;
     color: black;
     margin: 10px;
@@ -25,6 +25,3 @@ body {
     background-repeat: no-repeat;
 }
 
-main {
-    padding: 8px;
-}
