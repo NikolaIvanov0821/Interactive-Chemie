@@ -237,8 +237,9 @@
     }
 
     .content h1 {
-        color: #2ecc71;
+        color: #000000;
         font-size: 24px;
+        text-transform: capitalize;
     }
 
     .content-bold {
