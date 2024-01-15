@@ -21,7 +21,7 @@ header a {
 body {
     margin: 0;
     background-image: url(../images/background2.png);
-    background-size: contain;
+    background-size: content;
     background-repeat: no-repeat;
 }
 
