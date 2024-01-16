@@ -18,13 +18,19 @@ export function click(e) {
 
     asideRef.innerHTML = `<div id="popup-box" class="modal">
                                     <div class="content">
-                                        <h1 id="name">
-                                            ${orderBg[index.textContent - 1]}
-                                        </h1>
-
-                                        <p>
-                                            ${elementsInfo.summary}
-                                        </p>
+                                        <section id="top">
+                                            <section id="summary">
+                                                <h1 id="name">
+                                                    ${orderBg[index.textContent - 1]}
+                                                </h1>
+                                            
+                                                <p>
+                                                    ${elementsInfo.summary}
+                                                </p>
+                                            </section>
+                                            <img src="${orderBg[index.textContent - 1]}.jpg" alt="" >
+                                        </section>
+                                        
 
                                         <h2>История</h2>
                                         <p>
