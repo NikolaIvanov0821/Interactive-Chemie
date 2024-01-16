@@ -28,7 +28,7 @@ export function click(e) {
                                                     ${elementsInfo.summary}
                                                 </p>
                                             </section>
-                                            <img src="${orderBg[index.textContent - 1]}.jpg" alt="" >
+                                            <img src="../images/${orderBg[index.textContent - 1]}.jpg" alt="" >
                                         </section>
                                         
 

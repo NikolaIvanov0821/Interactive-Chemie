@@ -118,6 +118,10 @@
 
     .content-bold {
         font-weight: bold;
+    } 
+
+    #top {
+        display: flex;
     }
 
     .box-close {
@@ -254,6 +258,10 @@
 
     .content-bold {
         font-weight: bold;
+    }
+
+    #top {
+        display: flex;
     }
 
     .box-close {
