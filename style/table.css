@@ -3,12 +3,14 @@
         display: flex;
         justify-content: center;
     }
+
     #table {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(18, 4.5rem);
         gap: 1px;
-        align-self: center;
+        margin-left: 10px;
+        margin-bottom: 1px;
     }
 
     #lanthanoids {
@@ -17,6 +19,8 @@
         grid-template-rows: 1fr;
         gap: 1px;
         width: 100%;
+        margin-left: 10px;
+        margin-bottom: 1px;
     }
 
     #acthanoids {
@@ -25,6 +29,8 @@
         grid-template-rows: 1fr;
         gap: 1px;
         width: 100%;
+        margin-left: 10px;
+        margin-bottom: 1px;
     }
 
     #element {
@@ -125,6 +131,7 @@
         cursor: pointer;
     }
 }
+
 @media screen and (min-width: 1350px) {
     #table-wrapper h2 {
         display: flex;
@@ -260,6 +267,7 @@
         cursor: pointer;
     }
 }
+
 #nonmetal {
     background-color: #ffff00;
 }
@@ -295,6 +303,3 @@
 #post-transition-metal {
     background-color: #b8a7db;
 }
-
-
-
