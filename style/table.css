@@ -1,4 +1,4 @@
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1600px) {
     #table-wrapper h2 {
         display: flex;
         justify-content: center;
@@ -136,7 +136,7 @@
     }
 }
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1600px) {
     #table-wrapper h2 {
         display: flex;
         justify-content: center;
