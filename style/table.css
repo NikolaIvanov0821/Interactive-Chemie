@@ -149,29 +149,27 @@
         row-gap: 5px;
         column-gap: 5px;
         margin-bottom: 5px;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 12.5%;
+        margin-right: 12.5%;
     }
 
     #lanthanoids {
         display: grid;
         grid-template-columns: repeat(18, 5rem);
-        grid-template-rows: 1fr;
         gap: 5px;
         width: 75%;
         margin-bottom: 5px;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 12.5%;
+        margin-right: 12.5%;
     }
 
     #acthanoids {
         display: grid;
         grid-template-columns: repeat(18, 5rem);
-        grid-template-rows: 1fr;
         gap: 5px;
         width: 75%;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 12.5%;
+        margin-right: 12.5%;
     }
 
     #element {

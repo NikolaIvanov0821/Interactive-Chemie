@@ -1,12 +1,16 @@
 nav {
-    margin-right: 5%;
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 header {
+    background-color: white;
     padding: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    
+
 }
 header a {
     display: inline-block;
