@@ -135,9 +135,9 @@
         border-radius: 5px;
     }
     .box-close {
-        background-color: rgb(255, 0, 0);
+        background-color: rgb(249, 37, 37);
         color: #fff;
-        font-size: 20px;
+        font-size: 19px;
         text-decoration: none;
         position: absolute;
         top: 10px;
