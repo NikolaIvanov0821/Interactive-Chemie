@@ -9,8 +9,8 @@
         display: grid;
         grid-template-columns: repeat(18, 4.5rem);
         gap: 1px;
-        margin-left: 12.5%;
-        margin-right: 12.5%;
+        margin-left: 10%;
+        /*margin-right: 10%;*/
         margin-bottom: 1px;
     }
 
@@ -20,8 +20,8 @@
         grid-template-rows: 1fr;
         gap: 1px;
         width: 75%;
-        margin-left: 12.5%;
-        margin-right: 12.5%;
+        margin-left: 10%;
+        
         margin-bottom: 1px;
     }
 
@@ -31,9 +31,9 @@
         grid-template-rows: 1fr;
         gap: 1px;
         width: 75%;
-        margin-left: 12.5%;
-        margin-right: 12.5%;
-        margin-bottom: 1px;
+        margin-left: 10%;
+        
+        margin-bottom: 10px;
     }
 
     #element {
@@ -119,6 +119,9 @@
         text-transform: capitalize;
     }
 
+    .content h2 {
+        margin-bottom: 0%;
+    }
     .content-bold {
         font-weight: bold;
     } 
@@ -128,6 +131,7 @@
     }
 
     #top img {
+        margin-left: 3px;
         border-radius: 5px;
     }
     .box-close {
