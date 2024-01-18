@@ -23,12 +23,14 @@ header a {
     margin: 10px;
     text-align: center;
 }
-
-body {
-    margin: 0;
+main {
     background-image: url(../images/background2.png);
     background-size: cover;
     background-repeat: no-repeat;
+}
+body {
+    margin: 0;
+    
 }
 
 footer {
