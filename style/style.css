@@ -41,8 +41,12 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin: 3px;
 }
 
+.footer-section section {
+    margin: 5px;
+}
 .footer-section {
     display: flex;
     padding: 10px;
