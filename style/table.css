@@ -5,11 +5,12 @@
     }
 
     #table {
-        width: 100%;
+        width: 75%;
         display: grid;
         grid-template-columns: repeat(18, 4.5rem);
         gap: 1px;
-        margin-left: 10px;
+        margin-left: 10%;
+        /*margin-right: 10%;*/
         margin-bottom: 1px;
     }
 
@@ -18,8 +19,9 @@
         grid-template-columns: repeat(18, 4.5rem);
         grid-template-rows: 1fr;
         gap: 1px;
-        width: 100%;
-        margin-left: 10px;
+        width: 75%;
+        margin-left: 10%;
+        
         margin-bottom: 1px;
     }
 
@@ -28,9 +30,10 @@
         grid-template-columns: repeat(18, 4.5rem);
         grid-template-rows: 1fr;
         gap: 1px;
-        width: 100%;
-        margin-left: 10px;
-        margin-bottom: 1px;
+        width: 75%;
+        margin-left: 10%;
+        
+        margin-bottom: 10px;
     }
 
     #element {
@@ -116,6 +119,9 @@
         text-transform: capitalize;
     }
 
+    .content h2 {
+        margin-bottom: 0%;
+    }
     .content-bold {
         font-weight: bold;
     } 
@@ -124,10 +130,14 @@
         display: flex;
     }
 
+    #top img {
+        margin-left: 3px;
+        border-radius: 5px;
+    }
     .box-close {
-        background-color: rgb(255, 0, 0);
+        background-color: rgb(249, 37, 37);
         color: #fff;
-        font-size: 20px;
+        font-size: 19px;
         text-decoration: none;
         position: absolute;
         top: 10px;

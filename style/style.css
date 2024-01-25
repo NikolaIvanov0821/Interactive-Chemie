@@ -1,6 +1,8 @@
 nav {
     margin-right: 5px;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: flex-end;
 }
 
@@ -9,13 +11,13 @@ header {
     padding: 5px;
     display: flex;
     flex-direction: row;
-    
+    justify-content: center;
 
 }
 header a {
     display: inline-block;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     color: black;
     margin: 10px;
@@ -29,3 +31,58 @@ body {
     background-repeat: no-repeat;
 }
 
+footer {
+    background-color: #fff;
+    color: #000000;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 3px;
+}
+
+.footer-section section {
+    margin: 5px;
+}
+.footer-section {
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footer-section h2 {
+    color: #000000;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.8em;
+    margin: 0;
+}
