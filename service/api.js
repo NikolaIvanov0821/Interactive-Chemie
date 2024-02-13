@@ -3,11 +3,17 @@
 async function requester(url, method, data) {
     const option = {
         method,
-        headers: {}
+        headers: {},
+        body
+    }
+    const accessToken = sessionStorage.getItem("accessToken")
+    if (accessToken && accessToken !== undefined) {
+        option.headers['X-Authorization'] = accessToken;
     }
 
     if (data) {
         option.headers["Content-Type"] = "application/json"
+        option.body = data
     }
 
     const response = await fetch(url, option)
