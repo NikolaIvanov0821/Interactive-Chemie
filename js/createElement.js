@@ -1,5 +1,5 @@
 import { request } from "../service/api.js";
-import { click } from "./click.js";
+import { click } from "./openModal.js";
 
 const databaseUrl = "https://interactive-chemie-default-rtdb.europe-west1.firebasedatabase.app/";
 
