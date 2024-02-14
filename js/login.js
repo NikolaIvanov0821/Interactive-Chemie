@@ -34,9 +34,12 @@ signInWithEmailAndPassword(auth, email, password)
         photoUrl: user.photoURL,
         providerId: user.providerId,
         stsTokenManager: user.stsTokenManager,
-        uid: uid
+        uid: uid,
+        tokens
     }
     writeNewPost(uid, userInfo)
+    sessionStorage.setItem("user", userInfo)
+    window.location.href = "../static/table.html"
     // ...
   })
   .catch((error) => {

@@ -65,9 +65,12 @@ function signup(username, email, password, repassword) {
                     photoUrl: user.photoURL,
                     providerId: user.providerId,
                     stsTokenManager: user.stsTokenManager,
-                    uid: uid
+                    uid: uid,
+                    tokens
                 }
                 writeNewPost(uid, userInfo)
+                sessionStorage.setItem("user", userInfo)
+                window.location.href = "../static/table.html"
                 //sessionStorage.setItem("accessToken", user.accessToken)
                 //request.post(firebaseConfig.databaseURL + "/register/" + uid, user)
                 // ...

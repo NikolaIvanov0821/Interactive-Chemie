@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/auth.css">
     <script type="module" src="../js/register.js"></script>
+    <script type="module" src="../js/navigationUpdate.js"></script>
     <title>Регистрация</title>
 </head>
 <body>
@@ -16,23 +17,45 @@
 			<a href="../static/reactions.html">РЕАКЦИИ</a>
 			<a href="../static/about.html">ЗА ПРОЕКТА</a>
 			<a href="../static/login.html">ВХОД</a>
-            <a href="../static/reactions.html">РЕГИСТРАЦИЯ</a>
+            <a href="../static/register.html">РЕГИСТРАЦИЯ</a>
 		</nav>
 	</header>
 
     <main>
-        <form>
-            <h1>Регистрация</h1>
+        <div class="form-container">
+            <form>
+                <h1>Регистрация</h1>
                 <input type="text" id="username" placeholder="Потребителско име" required>
                 <input type="email" id="email" placeholder="Email" required>
                 <input type="password" id="password" placeholder="Парола" required>
                 <input type="password" id="repassword" placeholder="Повтори паролата" required>
-                <button type="submit" id="registerButton">Регистрирай се</button>
-                <p>Вече имаш профил? <button id="gotoLogin" href="#">Влез</button></p>
-        </form>
+                <button type="submit" id="registerButton">Регистрирай се</button>                
+            </form>
+            <p>Вече имаш профил? <button id="gotoLogin" href="../static/login.html">Влез</button></p>
+        </div>
+        
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="footer-section">
+            <section>
+                <h2>Контакти:</h2>
+                <p>Email: interactive.chemie@gmail.com</p>
+                <p>Phone: +123 456 7890</p>
+            </section>
+            <section>
+                <ul>
+                    <li><a href="./table.html">ТАБЛИЦА</a></li>
+                    <li><a href="./reactions.html">РЕАКЦИИ</a></li>
+                    <li><a href="./about.html">ЗА ПРОЕКТА</a></li>
+                    <li><a href="./login.html">ВХОД</a></li>
+                </ul>
+            </section>
+        </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Интерактивна химия. Всички права запазени.</p>
+    </div>
+</footer>
 </body>
 <script type="module">
     

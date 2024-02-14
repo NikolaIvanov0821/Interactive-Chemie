@@ -3,8 +3,7 @@
 async function requester(url, method, data) {
     const option = {
         method,
-        headers: {},
-        body
+        headers: {}
     }
     const accessToken = sessionStorage.getItem("accessToken")
     if (accessToken && accessToken !== undefined) {
