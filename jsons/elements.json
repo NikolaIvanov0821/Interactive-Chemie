@@ -1,0 +1,24 @@
+{
+    "calcium": {
+        "valence": 2,
+        "group": 2,
+        "period": 4,
+        "type": "metal",
+        "symbol": "Ca"
+    },
+
+    "chlorine": {
+        "valence": {
+            "high": 7,
+            "low": 1
+        },
+        "group": 7,
+        "period": 3,
+        "type": "nonmetal",
+        "symbol": "Cl"
+    },
+
+    "water": {
+        "type": "oxide"
+    }
+}

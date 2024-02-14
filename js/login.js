@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
 import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyC3ihLym-FfIRredRxkLj3ZUiJxpxEZQGk",
@@ -17,8 +17,14 @@ const auth = getAuth(app);
 const database = getDatabase(app)
 const email = document.getElementById("email").value
 const password = document.getElementById("password").value
+const form = document.querySelector("form")
 
-signInWithEmailAndPassword(auth, email, password)
+form.onsubmit = submit
+
+function submit(e) {
+  e.preventDefault()
+
+  signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
@@ -46,6 +52,8 @@ signInWithEmailAndPassword(auth, email, password)
     const errorCode = error.code;
     const errorMessage = error.message;
   });
+}
+
 
   function writeNewPost(uid, user) {
   
