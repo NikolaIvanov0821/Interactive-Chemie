@@ -40,8 +40,7 @@ function submit(e) {
         photoUrl: user.photoURL,
         providerId: user.providerId,
         stsTokenManager: user.stsTokenManager,
-        uid: uid,
-        tokens
+        uid: uid
     }
     writeNewPost(uid, userInfo)
     sessionStorage.setItem("user", userInfo)
@@ -51,6 +50,7 @@ function submit(e) {
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
+    alert(errorMessage)
   });
 }
 

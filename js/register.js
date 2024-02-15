@@ -2,9 +2,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
 import { getDatabase, ref, child, push, update, set } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-//import { request } from "../service/api.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -65,11 +62,10 @@ function signup(username, email, password, repassword) {
                     photoUrl: user.photoURL,
                     providerId: user.providerId,
                     stsTokenManager: user.stsTokenManager,
-                    uid: uid,
-                    tokens
+                    uid: uid
                 }
                 writeNewPost(uid, userInfo)
-                sessionStorage.setItem("user", userInfo)
+                sessionStorage.setItem("user", userInfo)                
                 window.location.href = "../static/table.html"
                 //sessionStorage.setItem("accessToken", user.accessToken)
                 //request.post(firebaseConfig.databaseURL + "/register/" + uid, user)
