@@ -9,7 +9,6 @@ const orderEn = await request.get(databaseUrl + "order-en/order.json");
 
 
 orderEn.map(element => {
-    //const bgName = orderBg[data[element].number - 1];
     const index = jsonData[element].number - 1;
 
     let direction = document.getElementById("table");
@@ -105,5 +104,5 @@ orderEn.map(element => {
     setingClass()
 });
 
-//getElements()
+
 

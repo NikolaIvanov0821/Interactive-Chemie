@@ -67,9 +67,6 @@ function signup(username, email, password, repassword) {
                 writeNewPost(uid, userInfo)
                 sessionStorage.setItem("user", userInfo)                
                 window.location.href = "../static/table.html"
-                //sessionStorage.setItem("accessToken", user.accessToken)
-                //request.post(firebaseConfig.databaseURL + "/register/" + uid, user)
-                // ...
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -80,26 +77,8 @@ function signup(username, email, password, repassword) {
     }
 }
 function writeNewPost(uid, user) {
-  
-    // A post entry.
-    // const postData = {
-    //   username: username,
-    //   uid: uid,
-    //   email: email,
-    //   password: password,
-    //   starCount: 0,
-    //   authorPic: picture
-    // };
-  
-    // Get a key for a new Post.
-    // const newPostKey = push(child(ref(db), 'posts')).key;
-  
-    // // Write the new post's data simultaneously in the posts list and the user's post list.
-    // const updates = {};
-    // updates['/register/' + uid + '/' + newPostKey] = user;
-    // //updates['/user-posts/' + uid + '/' + newPostKey] = postData;
     const rootRef = ref(database, "register/" + uid);
     const newChildRef = push(rootRef);
 
     return set(newChildRef, user);
-  }
+}

@@ -10,7 +10,7 @@ const guestTemplate = `<a href="../static/table.html">ТАБЛИЦА</a>
 const userTemplate = `<a href="../static/table.html">ТАБЛИЦА</a>
                     <a href="../static/reactions.html">РЕАКЦИИ</a>
                     <a href="../static/about.html">ЗА ПРОЕКТА</a>
-                    <a >ИЗХОД</a>`
+                    <button id="logout">ИЗХОД</button>`
 
 if (user && user !== undefined) {
     nav.innerHTML = userTemplate
