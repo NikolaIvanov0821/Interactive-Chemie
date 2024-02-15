@@ -1,24 +1,28 @@
 {
-    "calcium": {
-        "valence": 2,
-        "group": 2,
-        "period": 4,
-        "type": "metal",
-        "symbol": "Ca"
-    },
-
-    "chlorine": {
-        "valence": {
-            "high": 7,
-            "low": 1
+    "elements": {
+        "calcium": {
+            "valence": 2,
+            "group": 2,
+            "period": 4,
+            "type": "alkaline earth metal",
+            "symbol": "Ca"
         },
-        "group": 7,
-        "period": 3,
-        "type": "nonmetal",
-        "symbol": "Cl"
-    },
 
-    "water": {
-        "type": "oxide"
+        "chlorine": {
+            "valence": {
+                "high": 7,
+                "low": 1
+            },
+            "group": 7,
+            "period": 3,
+            "type": "halogen",
+            "symbol": "Cl"
+        },
+
+        "water": {
+            "type": "oxide",
+            "symbol": "H2O"
+        }
     }
+    
 }

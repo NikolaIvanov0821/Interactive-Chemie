@@ -1,8 +1,19 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
 import { getDatabase, ref, child, push, update, set } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
-import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js"; 
 
-const auth = getAuth(initializeApp);
+const firebaseConfig = {
+    apiKey: "AIzaSyC3ihLym-FfIRredRxkLj3ZUiJxpxEZQGk",
+    authDomain: "test-auth-intrchem.firebaseapp.com",
+    projectId: "test-auth-intrchem",
+    storageBucket: "test-auth-intrchem.appspot.com",
+    messagingSenderId: "761915305277",
+    appId: "1:761915305277:web:7d79d8daac6a42c77b2954",
+    measurementId: "G-S7W35233WW"
+};
+
+const app = initializeApp(firebaseConfig)
+const auth = getAuth(app);
 
 const logoutBtn = document.getElementById("logout")
 logoutBtn.addEventListener("click", logout)
@@ -11,6 +22,7 @@ function logout() {
     
     signOut(auth).then(() => {
         // Sign-out successful.
+        sessionStorage.removeItem("user")
         }).catch((error) => {
         // An error happened.
         });
