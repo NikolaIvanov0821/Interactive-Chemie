@@ -1,3 +1,4 @@
+//Функционалност за обновяване на навигацията на сайта
 const nav = document.querySelector("nav");
 const user = sessionStorage.getItem("user")
 

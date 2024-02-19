@@ -1,14 +1,14 @@
 import { request } from "../service/api.js";
 
-//import { html } from "../node_modules/lit-html/lit-html.js"
-
 const asideRef = document.getElementById("element-info")
 
+//Деклариране на база данни и подаване на заявки за информация за елементите 
 const databaseUrl = "https://interactive-chemie-default-rtdb.europe-west1.firebasedatabase.app/";
 const jsonData = await request.get(databaseUrl + "elements.json");
 const orderBg = await request.get(databaseUrl + "order-bg/order-bg.json");
 const orderEn = await request.get(databaseUrl + "order-en/order.json");
 
+//Създаване на изкачащ прозорец съдържащ информация за избран елемент
 export function click(e) {
     const index = e.target.parentElement.querySelector(".atomic-number")
     console.log(index);
@@ -74,6 +74,4 @@ export function click(e) {
     function closeBox() {
         document.getElementById("popup-box").style.display = "none"
     }
-
-
 }

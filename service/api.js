@@ -1,4 +1,4 @@
-
+//Функционалност за заявки към база данни
 
 async function requester(url, method, data) {
     const option = {

@@ -1,51 +1,61 @@
 import { request } from "../service/api.js";
 import { click } from "./openModal.js";
 
+//Деклариране на URL на базата данни
 const databaseUrl = "https://interactive-chemie-default-rtdb.europe-west1.firebasedatabase.app/";
 
+//Извличне на данни за елементите от базата данни
 const jsonData = await request.get(databaseUrl + "elements.json");
 const orderBg = await request.get(databaseUrl + "order-bg/order-bg.json");
 const orderEn = await request.get(databaseUrl + "order-en/order.json");
 
+//Деклариране на section-ни в които се добавят елементите
+const direction = document.getElementById("table");
+const lanthanoids = document.getElementById("lanthanoids")
+const acthanoids = document.getElementById("acthanoids")
 
+//Функиця за създаване на div съдържащ информация за елемента
 orderEn.map(element => {
     const index = jsonData[element].number - 1;
-
-    let direction = document.getElementById("table");
-    let newDiv = document.createElement("div");
+    
+    //Създаване на div за елемента
+    const newDiv = document.createElement("div");
     newDiv.className = "element";
 
-    let atomicNumber = document.createElement("div")
+    //Деклариранена атомния номер на елемента
+    const atomicNumber = document.createElement("div")
     atomicNumber.textContent = `${jsonData[element].number}`;
     atomicNumber.className = "atomic-number";
 
-    let elementName = document.createElement("div");
+    //Деклариране на английското наименивание на елемента
+    const elementName = document.createElement("div");
     elementName.textContent = `${jsonData[element].name}`;
     elementName.className = "name";
 
-    let symbol = document.createElement("div");
+    //Деклариране на химичния знак на елемента
+    const symbol = document.createElement("div");
     symbol.textContent = `${jsonData[element].symbol}`;
     symbol.className = "symbol";
     symbol.onclick = click;
 
-    let bgName = document.createElement("div");
+    //Деклариране на българското наименование на елемента
+    const bgName = document.createElement("div");
     bgName.textContent = orderBg[jsonData[element].number - 1];
     bgName.className = "bg-name";
 
-
-    let mass = document.createElement("div");
+    //Деклариране на атомната маса на елемента
+    const mass = document.createElement("div");
     mass.textContent = `${Number(jsonData[element]['atomic_mass']).toFixed(3)}`;
     mass.className = "atomic-mass";
 
+    //Добавяне на отделните компоненти към елемента
     newDiv.appendChild(atomicNumber)
     newDiv.appendChild(elementName)
     newDiv.appendChild(symbol)
     newDiv.appendChild(bgName)
     newDiv.appendChild(mass)
 
-    let lanthanoids = document.getElementById("lanthanoids")
-    let acthanoids = document.getElementById("acthanoids")
-
+    //Добавяне на елемента към section спрямо атомия му номер
     if (index >= 56 && index <= 70) {
         lanthanoids.appendChild(newDiv)
     } else if (index >= 88 && index <= 102) {
@@ -53,34 +63,36 @@ orderEn.map(element => {
     } else {
         direction.appendChild(newDiv)
     }
-
+    
+    //Подреждане на елементите в основния section
     function elememntOrder() {
         if (index === 0) {
             for (let i = 0; i < 16; i++) {
-                let emptyDiv = document.createElement('div')
+                const emptyDiv = document.createElement('div')
                 direction.appendChild(emptyDiv)
             }
         }
         if (index === 3 || index === 11) {
             for (let i = 0; i < 10; i++) {
-                let emptyDiv = document.createElement('div')
+                const emptyDiv = document.createElement('div')
                 direction.appendChild(emptyDiv)
             }
         }
         if (index === 55) {
-            let emptyDiv = document.createElement('div')
+            const emptyDiv = document.createElement('div')
             direction.appendChild(emptyDiv)
 
         }
         if (index === 87) {
-            let emptyDiv = document.createElement('div')
+            const emptyDiv = document.createElement('div')
             direction.appendChild(emptyDiv)
 
         }
     }
     elememntOrder()
 
-    function setingClass() {
+    //Задаване на id на елемента спрямо типа му
+    function setingID() {
         if (jsonData[element].number === 1 || (jsonData[element].number >= 5 && jsonData[element].number <= 8) || (jsonData[element].number >= 14 && jsonData[element].number <= 16) || jsonData[element].number === 33 || jsonData[element].number === 34 || jsonData[element].number === 52) {
             newDiv.id = "nonmetal"
         } else if (jsonData[element].number === 2 || jsonData[element].number === 10 || jsonData[element].number === 18 || jsonData[element].number === 36 || jsonData[element].number === 54 || jsonData[element].number === 86 || jsonData[element].number === 118) {
@@ -101,8 +113,5 @@ orderEn.map(element => {
             newDiv.id = "post-transition-metal"
         }
     }
-    setingClass()
+    setingID()
 });
-
-
-

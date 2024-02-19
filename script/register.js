@@ -3,8 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebas
 import { getDatabase, ref, child, push, update, set } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+//Информация за базата данни
 const firebaseConfig = {
     apiKey: "AIzaSyC3ihLym-FfIRredRxkLj3ZUiJxpxEZQGk",
     authDomain: "test-auth-intrchem.firebaseapp.com",
@@ -15,16 +14,15 @@ const firebaseConfig = {
     measurementId: "G-S7W35233WW"
   };
 
-// Initialize Firebase
+//Деклариране на базата данни и нейни компоненти
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth(app);
 
+//Създаване на функция за подаване на формуляра за регистрация
 const form = document.querySelector("form")
-
 form.onsubmit = submit
 
-console.log(database);
 function submit(e) {
     e.preventDefault();
     console.log(e.target);
@@ -37,6 +35,7 @@ function submit(e) {
     signup(username, email, password, repassword)
 }
 
+//Функция за регистриране на потребителя
 function signup(username, email, password, repassword) {
     let isOk = true
 
@@ -76,9 +75,9 @@ function signup(username, email, password, repassword) {
             });    
     }
 }
-function writeNewPost(uid, user) {
+async function writeNewPost(uid, user) {
     const rootRef = ref(database, "register/" + uid);
     const newChildRef = push(rootRef);
 
-    return set(newChildRef, user);
+    return await set(newChildRef, user);
 }

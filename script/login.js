@@ -2,6 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebas
 import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
 
+//Информация за базата данни
 const firebaseConfig = {
     apiKey: "AIzaSyC3ihLym-FfIRredRxkLj3ZUiJxpxEZQGk",
     authDomain: "test-auth-intrchem.firebaseapp.com",
@@ -12,12 +13,13 @@ const firebaseConfig = {
     measurementId: "G-S7W35233WW"
 };
 
+//Деклариране на базата данни и нейни компоненти
 const app = initializeApp(firebaseConfig)
 const auth = getAuth(app);
 const database = getDatabase(app)
 
+//Създаване на функция за подаване на формуляра за вход
 const form = document.querySelector("form")
-
 form.onsubmit = submit
 
 function submit(e) {
@@ -28,6 +30,7 @@ function submit(e) {
     signin(email, password)
 }
 
+//Функция за влизане в профил на потребителя
 function signin(email, password) {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -60,11 +63,11 @@ function signin(email, password) {
       });
 }
 
-
-function writeNewPost(uid, user) {
+//Записване на влезлия потребител в базата данни
+async function writeNewPost(uid, user) {
     const rootRef = ref(database, "login/" + uid);
     const newChildRef = push(rootRef);
 
-    return set(newChildRef, user);
+    return await set(newChildRef, user);
 }
 

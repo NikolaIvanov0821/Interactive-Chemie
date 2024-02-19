@@ -2,6 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebas
 import { getDatabase, ref, child, push, update, set } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
 import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js"; 
 
+//Информация за базата данни
 const firebaseConfig = {
     apiKey: "AIzaSyC3ihLym-FfIRredRxkLj3ZUiJxpxEZQGk",
     authDomain: "test-auth-intrchem.firebaseapp.com",
@@ -12,9 +13,11 @@ const firebaseConfig = {
     measurementId: "G-S7W35233WW"
 };
 
+//Деклариране на базата данни и нейни компоненти
 const app = initializeApp(firebaseConfig)
 const auth = getAuth(app);
 
+//Създаване на функция за изход от профила на потребителя
 const logoutBtn = document.getElementById("logout")
 logoutBtn.addEventListener("click", logout)
 
