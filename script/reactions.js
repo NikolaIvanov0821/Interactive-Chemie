@@ -1,5 +1,3 @@
-import { html, render } from "../node_modules/lit-html/lit-html.js";
-
 const filter = document.getElementById("filter")
 const articles = document.getElementById("articles")
 
