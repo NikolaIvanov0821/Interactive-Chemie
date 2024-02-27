@@ -4,17 +4,13 @@ body {
     padding: 0;
 }
 
+h2 {
+    text-align: center;
+}
 
 #filters {
-    margin-bottom: 10px;
-}
-
-#articlesContainer {
-    margin: 20px;
-}
-
-.articlesPage {
     display: none;
+    margin-bottom: 10px;
 }
 
 article {
@@ -35,6 +31,8 @@ article:hover {
     background-color: #fff;
     border-radius: 20px;
     margin: 10rem;
+    margin-top: auto;
+    margin-bottom: 5rem;
 }
 
 .articles {
@@ -61,4 +59,8 @@ article:hover {
 
 .pagination a:hover {
     background-color: #ccc;
+}
+.pagination {
+    display: inline-block;
+    text-align: center;
 }

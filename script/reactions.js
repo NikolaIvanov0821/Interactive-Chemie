@@ -41,21 +41,41 @@ for (const reaction in elements) {
 }
 
 const one = document.getElementById("to-first")
+const two = document.getElementById("to-second")
+const three = document.getElementById("to-third")
+
 one.onclick = () => {
+    one.style.backgroundColor = 'black'
+    one.style.color = 'white'
+    two.style.backgroundColor = 'white'
+    two.style.color = 'black'
+    three.style.backgroundColor = 'white'
+    three.style.color = "black"
     articles.style.display = 'flex'
     articles2.style.display = 'none'
     articles3.style.display = 'none'
 }
 
-const two = document.getElementById("to-second")
+
 two.onclick = () => {
+    two.style.backgroundColor = 'black'
+    two.style.color = 'white'
+    one.style.backgroundColor = 'white'
+    one.style.color = 'black'
+    three.style.backgroundColor = 'white'
+    three.style.color = "black"
     articles.style.display = 'none'
     articles2.style.display = 'flex'
     articles3.style.display = 'none'
 }
 
-const three = document.getElementById("to-third")
 three.onclick = () => {
+    three.style.backgroundColor = 'black'
+    three.style.color = 'white'
+    two.style.backgroundColor = 'white'
+    two.style.color = 'black'
+    one.style.backgroundColor = 'white'
+    one.style.color = 'black'
     articles.style.display = 'none'
     articles2.style.display = 'none'
     articles3.style.display = 'flex'
