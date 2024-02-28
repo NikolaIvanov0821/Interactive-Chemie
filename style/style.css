@@ -87,3 +87,26 @@ footer {
     font-size: 0.8em;
     margin: 0;
 }
+
+.about {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 8rem;
+}
+.about p {
+    margin-block-start: 0px;
+    margin-bottom: 0px;
+    padding: 20px;
+    padding-top: 0px;
+    font-size: 18px;
+}
+
+.about h3 {
+    padding: 20px;
+    padding-bottom: 0px;
+    font-size: 24px;
+    margin-block-end: 5px;
+    margin-block-start: 10px;
+}
