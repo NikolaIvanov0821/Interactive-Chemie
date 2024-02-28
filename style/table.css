@@ -434,6 +434,145 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    #table {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(18, 3.5rem);
+        gap: 1px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1px;
+    }
+
+    #lanthanoids {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(18, 3.5rem);
+        grid-template-rows: 1fr;
+        gap: 1px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1px;
+    }
+
+    #acthanoids {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(18, 3.5rem);
+        grid-template-rows: 1fr;
+        gap: 1px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #element {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .element {
+        height: 3.5rem;
+        width: 3.5rem;
+        border: 1px solid #ccc;
+        display: flex;
+        z-index: 100;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 0 15% black;
+    }
+
+    .element:hover {
+        cursor: pointer;
+    }
+
+    .bg-name {
+        font-size: 8.5px;
+        text-align: center;
+        z-index: 0;
+    }
+
+    .atomic-number {
+        font-size: 9px;
+        text-align: left;
+        padding-left: 2px;
+        z-index: 0;
+    }
+
+    .symbol {
+        font-size: 16px;
+        text-align: center;
+        z-index: 0;
+        cursor: pointer;
+    }
+
+    .name {
+        font-size: 9px;
+        text-align: center;
+        z-index: 0;
+    }
+
+    .atomic-mass {
+        font-size: 8.5px;
+        text-align: right;
+        padding-right: 2px;
+        z-index: 0;
+    }
+
+    #popup-box {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #e8f8ff;
+        color: black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .content {
+        margin: 10px;
+        margin-top: 10px;
+        padding: 20px;
+        max-height: 80vh;
+        overflow-y: auto;
+        background: #fff;
+        border-radius: 8px;
+    }
+
+    .content h1 {
+        color: #000000;
+        font-size: 24px;
+        text-transform: capitalize;
+    }
+
+    .content h2 {
+        margin-bottom: 0%;
+    }
+
+    #top {
+        display: flex;
+    }
+
+    #top img {
+        margin-left: 3px;
+        border-radius: 5px;
+    }
+    .box-close {
+        background-color: rgb(249, 37, 37);
+        color: #fff;
+        font-size: 19px;
+        text-decoration: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+}
 #nonmetal {
     background-color: #ffff00;
 }
