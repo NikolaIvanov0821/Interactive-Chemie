@@ -1,6 +1,6 @@
 //Функционалност за обновяване на навигацията на сайта
 const nav = document.querySelector("nav");
-const user = sessionStorage.getItem("user")
+const user = sessionStorage.getItem("uid")
 
 const guestTemplate = `<a href="../static/table.html">ТАБЛИЦА</a>
                     <a href="../static/reactions.html">РЕАКЦИИ</a>
@@ -18,3 +18,6 @@ if (user && user !== undefined) {
 } else {
     nav.innerHTML = guestTemplate
 }
+export function updatenav() {
+    nav.innerHTML = guestTemplate
+} 

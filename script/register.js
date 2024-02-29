@@ -17,7 +17,7 @@ const firebaseConfig = {
 //Деклариране на базата данни и нейни компоненти
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-const auth = getAuth(app);
+const auth = getAuth(app); 
 
 //Създаване на функция за подаване на формуляра за регистрация
 const form = document.querySelector("form")
@@ -64,7 +64,10 @@ function signup(username, email, password, repassword) {
                     uid: uid
                 }
                 writeNewPost(uid, userInfo)
-                sessionStorage.setItem("user", userInfo)                
+                sessionStorage.setItem("email", userInfo.email)
+                sessionStorage.setItem("username", username)
+                sessionStorage.setItem("accessToken", userInfo.accessToken)
+                sessionStorage.setItem("uid", userInfo.uid)                
                 window.location.href = "../static/table.html"
             })
             .catch((error) => {
@@ -79,5 +82,5 @@ async function writeNewPost(uid, user) {
     const rootRef = ref(database, "register/" + uid);
     const newChildRef = push(rootRef);
 
-    return await set(newChildRef, user);
+    await set(newChildRef, user);
 }

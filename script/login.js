@@ -51,7 +51,9 @@ function signin(email, password) {
               uid: uid
           }
           writeNewPost(uid, userInfo)
-          sessionStorage.setItem("user", userInfo)
+          sessionStorage.setItem("email", userInfo.email)
+          sessionStorage.setItem("accessToken", userInfo.accessToken)
+          sessionStorage.setItem("uid", userInfo.uid)
 
           window.location.href = "../static/table.html"
           // ...
@@ -68,6 +70,6 @@ async function writeNewPost(uid, user) {
     const rootRef = ref(database, "login/" + uid);
     const newChildRef = push(rootRef);
 
-    return await set(newChildRef, user);
+    await set(newChildRef, user);
 }
 

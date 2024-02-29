@@ -6,6 +6,15 @@ nav {
     justify-content: flex-end;
 }
 
+#logout {
+    border: 0px;
+    background-color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin: 10px;
+    cursor: pointer;
+}
 header {
     background-color: white;
     padding: 5px;
